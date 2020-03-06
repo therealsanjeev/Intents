@@ -11,6 +11,10 @@ import java.time.Instant;
 
 public class MainActivity extends AppCompatActivity {
 
+    final static String KEY_1="NAME";
+    public static String KEY_2="AGE";
+    public static String KEY_3="isStudent";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
+
+                i.putExtra(KEY_1,"Sanjeev");
+                i.putExtra(KEY_2,19);
+                i.putExtra(KEY_3,false);
+
                 startActivity(i);
             }
         });
